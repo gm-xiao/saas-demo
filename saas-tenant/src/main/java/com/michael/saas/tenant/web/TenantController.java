@@ -32,4 +32,11 @@ public class TenantController {
         }
         return true;
     }
+
+    @PostMapping(value = "/loginOut")
+    public boolean loginOut(HttpServletRequest request ){
+        request.getSession().removeAttribute("TENANTID");
+        return true;
+    }
+
 }
